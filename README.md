@@ -33,7 +33,7 @@ Para ejecutar el proyecto localmente, clona el repositorio y configura las varia
 1. Clona el repositorio:
    ```shell
    git clone https://github.com/AndresGomez28/Nest-Auth-API.git
-   cd book-management-api
+   cd Nest-Auth-API
     ```
 2. Instala las dependencias necesarias:
    ```shell
