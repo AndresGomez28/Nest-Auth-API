@@ -3,6 +3,7 @@ import { registerAs } from '@nestjs/config';
 export default registerAs('dbConfig', () => {
   const dbConfig = {
     db: {
+      port: process.env.PORT,
       connection: process.env.DB_CONNECTION,
       host: process.env.DB_HOST,
       name: process.env.DB_NAME,

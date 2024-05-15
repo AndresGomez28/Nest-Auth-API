@@ -26,11 +26,34 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
+## Configuración Local
 
-```bash
-$ npm install
-```
+Para ejecutar el proyecto localmente, clona el repositorio y configura las variables de entorno necesarias para la base de datos y JWT.
+
+1. Clona el repositorio:
+   ```shell
+   git clone https://github.com/AndresGomez28/Nest-Auth-API.git
+   cd book-management-api
+    ```
+2. Instala las dependencias necesarias:
+   ```shell
+   npm install
+    ```
+3. Copia el archivo .env.example a un nuevo archivo .env y configura las variables de entorno necesarias:
+   ```shell
+   cp .env.example .env
+    ```
+   Edita el archivo .env y configura los siguientes valores:
+    ```shell
+    DB_CONNECTION=mongodb://
+    DB_HOST=localhost:27017
+    DB_NAME=Your-LocalDB-Name
+    DB_USER=Your-LocalDB-Username
+    DB_PASSWORD=Your-LocalDB-Password
+    JWT_SECRET=Your-JWT-Secret-Key
+    ACCESS_TOKEN_EXPIRY=15m
+    ```
+   Estos pasos garantizan que tengas toda la configuración necesaria para ejecutar el proyecto localmente, ajustando las variables de entorno según las necesidades de tu entorno de desarrollo.
 
 ## Running the app
 
@@ -56,6 +79,14 @@ $ npm run test:e2e
 
 # test coverage
 $ npm run test:cov
+```
+
+## Auth
+
+- JWT secret generator command
+
+```bash
+node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 ```
 
 ## Support
