@@ -18,7 +18,7 @@ export class UserRegisterDto {
   @ApiProperty()
   @IsNotEmpty()
   @IsString()
-  username: string;
+  userName: string;
 
   @ApiProperty()
   @IsNotEmpty()
@@ -26,5 +26,7 @@ export class UserRegisterDto {
   @MaxLength(50, { message: 'password should be maximium 50' })
   password: string;
 
+  @ApiProperty()
+  @IsNotEmpty()
   role: string;
 }
